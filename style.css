@@ -129,6 +129,11 @@ body {
 }
 .card > *:last-child { margin-bottom: 0; }
 
+/* ----- Classes escritas por mim ----- */
+.destaque-tag {
+  color: #b94a48;
+}
+
 /* ---------- Barra de seção ---------- */
 .section-bar {
   margin: 40px 0 20px;
@@ -195,10 +200,14 @@ body {
 .item-body {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .3s ease;
+  visibility: hidden;
+  transition: grid-template-rows .3s ease, visibility .3s;
 }
 
-.item.open .item-body { grid-template-rows: 1fr; }
+.item.open .item-body {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
 
 .item-body-inner {
   overflow: hidden;
